@@ -1,0 +1,3 @@
+/home/jeantik/programs/SecondBrainBot/CMakeFiles/TelegramBot.dir
+/home/jeantik/programs/SecondBrainBot/CMakeFiles/edit_cache.dir
+/home/jeantik/programs/SecondBrainBot/CMakeFiles/rebuild_cache.dir

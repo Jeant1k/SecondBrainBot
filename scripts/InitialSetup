@@ -1,0 +1,54 @@
+#!/bin/bash
+
+# Переменная для имени проекта
+project_name="SecondBrainBot"
+
+# Определение имени проекта
+export PROJECT_NAME=$project_name
+
+# Обновление системы и установка необходимых пакетов
+echo "Обновление системы..."
+sudo apt-get update -y
+sudo apt-get upgrade -y
+
+# Установка необходимых пакетов (здесь cmake и g++)
+sudo apt-get install -y cmake g++
+
+# Установка необходимых пакетов (здесь tgbot)
+sudo apt-get install -y g++ make binutils cmake libssl-dev libboost-system-dev zlib1g-dev libboost-iostreams-dev
+
+git clone https://github.com/reo7sp/tgbot-cpp.git
+cd tgbot-cpp
+mkdir build
+cd build
+cmake ..
+make
+sudo make install
+
+cd ../../
+rm -rf tgbot-cpp
+
+
+# Переход в каталог проекта
+cd ../
+
+# Создание каталога сборки
+mkdir build
+cd build
+
+# Запуск CMake и сборка проекта
+echo "Сборка проекта..."
+cmake ..
+make
+
+# Запуск исполняемого файла
+echo "Запуск исполняемого файла..."
+./$project_name
+
+# Очистка после сборки
+echo "Очистка..."
+make clean
+cd ..
+rm -rf build
+
+echo "Готово!"
