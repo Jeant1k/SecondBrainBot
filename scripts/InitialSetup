@@ -11,10 +11,8 @@ echo "Обновление системы..."
 sudo apt-get update -y
 sudo apt-get upgrade -y
 
-# Установка необходимых пакетов (здесь cmake и g++)
+# Установка необходимых пакетов
 sudo apt-get install -y cmake g++
-
-# Установка необходимых пакетов (здесь tgbot)
 sudo apt-get install -y g++ make binutils cmake libssl-dev libboost-system-dev zlib1g-dev libboost-iostreams-dev
 
 git clone https://github.com/reo7sp/tgbot-cpp.git
