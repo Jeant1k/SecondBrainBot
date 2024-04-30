@@ -47,7 +47,7 @@ std::unordered_map<int64_t, std::string> chatStates;
 
 int main() {
 
-    TgBot::Bot bot("5699724308:AAEO8PxBfWj-Bnd2Y6WYRyT2NJPWdjrqkLY");
+    TgBot::Bot bot("/* token */");
 
     Database db("dbname=secondbrainbot user=jeantik password=123 hostaddr=127.0.0.1 port=5432");
     db.connect();
